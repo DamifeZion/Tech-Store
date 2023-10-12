@@ -5,6 +5,7 @@ import ProductSlider from "../components/productSlider/ProductSlider";
 import zipImg from "../assets/zip.svg";
 import { Link } from "react-router-dom";
 import ProductList from "../components/productSlider/ProductList";
+import { productListData } from "../data/listingPage/productListData";
 
 const Listing = () => {
   return (
@@ -41,8 +42,12 @@ const Listing = () => {
           </Link>
         </div>
 
-        <div id="product-list-1" className="template mt-[14px] mb-10 lg:px-[--px] 1400:px-0">
-          <ProductList />
+        <div
+          id="product-list-1"
+          className="template mt-[14px] mb-10 lg:px-[--px] 1400:px-0"
+        >
+         
+            <ProductList key={0} arrayData={productListData} />
         </div>
       </div>
     </div>
