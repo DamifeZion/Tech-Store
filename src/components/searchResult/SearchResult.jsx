@@ -19,7 +19,7 @@ const SearchResult = () => {
 
       {
         searchValue && (
-          <div className="flex flex-wrap border border-red-600 pb-[12px] px-[--px]">
+          <div className="flex flex-wrap pb-[12px] px-[--px]">
       {productSliderData.map((data, index) => (
         <ProductCard
           key={index}
