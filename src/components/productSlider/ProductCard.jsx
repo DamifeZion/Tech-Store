@@ -8,7 +8,7 @@ import checkAvailability from "../../assets/checkAvailability.svg";
 import { BiSolidStar } from "react-icons/bi";
 import { limitTextCharacterUtil } from "../../util/limitTextCharacterUtil";
 
-const ProductCard = ({ arrayData, btnStyle, contCn, iconSpanCn }) => {
+const ProductCard = ({ arrayData, btnStyle, buttonStyle, contCn, iconSpanCn }) => {
   return (
     <div
       id="product"
@@ -88,6 +88,7 @@ const ProductCard = ({ arrayData, btnStyle, contCn, iconSpanCn }) => {
 
       <button
         id="add-to-cart"
+        style={buttonStyle}
         className={`hidden mt-[12px] group-hover:flex items-center justify-center text-[14px] font-semibold text-[--col3] border-2 border-[--col3] rounded-[50px] gap-[2px] px-[20px] py-[6px] ${btnStyle}`}
       >
         <img src={cart} />

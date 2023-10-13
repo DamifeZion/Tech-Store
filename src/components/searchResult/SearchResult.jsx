@@ -1,17 +1,48 @@
 import React from "react";
 import { useIsSearching } from "../../hooks/useIsSearching";
-import { useSelector } from "react-redux";
+import { productListData } from "../../data/listingPage/productListData";
 import ProductCard from "../productSlider/ProductCard";
+import { productSliderData } from "../../data/listingPage/productSliderData";
+import { useSelector } from "react-redux";
 
 const SearchResult = () => {
   useIsSearching();
-
-  const { filteredProducts } = useSelector((state) => state.desktopNavSlice);
+  const { searchValue } = useSelector((state) => state.desktopNavSlice);
 
   return (
-    <div className="flex border border-red-600 py-[12px] md:mt-[19px]">
-      <ProductCard />
+    <>
+      {!searchValue && (
+        <div>
+          <h1></h1>
+        </div>
+      )}
+
+      {
+        searchValue && (
+          <div className="flex flex-wrap border border-red-600 pb-[12px] px-[--px]">
+      {productSliderData.map((data, index) => (
+        <ProductCard
+          key={index}
+          arrayData={data}
+          contCn={"w-1/5 mt-[14px] md:mt-[19px]"}
+          buttonStyle={{ display: "none" }}
+        />
+      ))}
+
+      {productListData.map((category, categoryIndex) =>
+        category.products.map((product, productIndex) => (
+          <ProductCard
+            key={productIndex}
+            arrayData={product}
+            contCn={"w-1/5 mt-[14px] md:mt-[19px]"}
+            buttonStyle={{ display: "none" }}
+          />
+        ))
+      )}
     </div>
+        )
+      }
+    </>
   );
 };
 
