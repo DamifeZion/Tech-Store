@@ -13,7 +13,6 @@ export const productSliderUtil = () => {
   }, []);
 
   const scrollToPreviousSlide = () => {
-    console.log("Prev Clicked");
     const slider = sliderRef.current;
     //make the slider scroll only on click
     slider.classList.add("overflow-auto");
@@ -37,7 +36,6 @@ export const productSliderUtil = () => {
   };
 
   const scrollToNextSlide = () => {
-    console.log("Next Clicked");
     const slider = sliderRef.current;
     //make the slider scroll only on click
     slider.classList.add("overflow-x-auto");

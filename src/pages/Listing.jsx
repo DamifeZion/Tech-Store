@@ -9,7 +9,7 @@ import { productListData } from "../data/listingPage/productListData";
 import { sponsorsLogoData } from "../data/listingPage/sponsorsLogoData";
 import ListingSponsorImg from "../components/listingSponsorImg/ListingSponsorImg";
 import LisitingFollowPost from "../components/listingFollowPost/LisitingFollowPost";
-import { lisitingFollowPost } from "../data/listingPage/lisitingFollowPost";
+import { lisitingFollowPostData } from "../data/listingPage/lisitingFollowPostData";
 
 const Listing = () => {
   return (
@@ -77,7 +77,7 @@ const Listing = () => {
           id="follow-us-posts"
           className="flex flex-wrap 1300:gap-[4px]"
         >
-          {lisitingFollowPost.map((data, index) => (
+          {lisitingFollowPostData.map((data, index) => (
             <LisitingFollowPost key={index} arrayData={data} />
           ))}
         </div>

@@ -8,7 +8,7 @@ import post7 from "../../assets/followPost7.png";
 import post8 from "../../assets/followPost8.png";
 import post9 from "../../assets/followPost9.png";
 
-export const lisitingFollowPost = [
+export const lisitingFollowPostData = [
   {
     img: post1,
     body: "If you’ve recently made a desktop PC or laptop purchase, you might want to consider adding peripherals to enhance your home office setup, your gaming rig, or your business workspace...",
