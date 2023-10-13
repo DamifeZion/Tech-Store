@@ -71,7 +71,7 @@ const NavbarMobile = () => {
 
       <div
         id="main-menu"
-        className={`absolute top-0 left-0 z-[1000] w-full transition-all ease-linear duration-200 ${
+        className={`fixed top-0 left-0 z-[1000] w-full transition-all ease-linear duration-200 ${
           mainMenuVisibility ? "visible" : "invisible"
         }`}
       >
