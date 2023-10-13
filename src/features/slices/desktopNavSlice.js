@@ -7,6 +7,7 @@ export const desktopNavSlice = createSlice({
     searchVisibility: false,
     searchValue: "",
     miniCartVisibility: false,
+    filteredProducts: [],
   },
 
   reducers: {
@@ -20,6 +21,10 @@ export const desktopNavSlice = createSlice({
 
     miniCartToggle: (state, action) => {
       state.miniCartVisibility = action.payload;
+    },
+
+    setFilteredProducts: (state, action) => {
+      state.filteredProducts = action.payload;
     },
   },
 });

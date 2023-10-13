@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
+import { useIsSearching } from "../../hooks/useIsSearching";
+import { useSelector } from "react-redux";
+import ProductCard from "../productSlider/ProductCard";
 
 const SearchResult = () => {
-  return (
-    <div className='flex border border-red-600 py-[12px] md:mt-[19px]'>
-      SearchResult 
-    </div>
-  )
-}
+  useIsSearching();
 
-export default SearchResult
+  const { filteredProducts } = useSelector((state) => state.desktopNavSlice);
+
+  return (
+    <div className="flex border border-red-600 py-[12px] md:mt-[19px]">
+      <ProductCard />
+    </div>
+  );
+};
+
+export default SearchResult;

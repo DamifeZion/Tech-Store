@@ -8,10 +8,10 @@ import checkAvailability from "../../assets/checkAvailability.svg";
 import { BiSolidStar } from "react-icons/bi";
 import { limitTextCharacterUtil } from "../../util/limitTextCharacterUtil";
 
-const ProductCard = ({ id, arrayData, btnStyle, contCn, iconSpanCn}) => {
+const ProductCard = ({ arrayData, btnStyle, contCn, iconSpanCn }) => {
   return (
     <div
-      id={id}
+      id="product"
       className={`${contCn} px-3 pt-4 pb-[20px] flex flex-col relative bg-[--white] group cursor-pointer hover:shadow-shadow1 hover:z-50 min-w-[70%] 400:min-w-[55%] 500:min-w-[40%] 600:px-[25px] md:min-w-[30%] 1000:min-w-[25%] lg:min-w-[20%] xl:min-w-[16.5%] `}
     >
       <div
