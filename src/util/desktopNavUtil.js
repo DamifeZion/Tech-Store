@@ -1,8 +1,9 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { desktopNavSlice } from "../features/slices/desktopNavSlice";
 
 export const desktopNavUtil = () => {
   const dispatch = useDispatch();
+  const { searchValue } = useSelector((state) => state.desktopNavSlice);
 
   const searchBarToggle = () => {
     dispatch(desktopNavSlice.actions.searchBarToggle());

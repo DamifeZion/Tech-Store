@@ -6,10 +6,12 @@ import { mobileNavUtil } from "../../../util/mobileNavUtil";
 import { useSelector } from "react-redux";
 import MainMenu from "./MainMenu";
 import SiteHeader from "../../siteHeader/SiteHeader";
+import { desktopNavUtil } from "../../../util/desktopNavUtil";
 
 const NavbarMobile = () => {
   const { mainMenuToggle } = mobileNavUtil();
   const { mainMenuVisibility } = useSelector((state) => state.mobileNavSlice);
+  const { handleSearchChange } = desktopNavUtil();
 
   return (
     <>
@@ -36,6 +38,7 @@ const NavbarMobile = () => {
 
           <input
             type="text"
+            onChange={handleSearchChange}
             placeholder="Search here"
             className="w-full h-[38px] pl-[38px] pr-[15px] md:h-[38px] outline-none"
           />
