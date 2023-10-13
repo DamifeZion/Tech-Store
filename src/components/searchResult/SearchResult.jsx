@@ -12,36 +12,34 @@ const SearchResult = () => {
   return (
     <>
       {!searchValue && (
-        <div>
-          <h1></h1>
+        <div className="w-full h-64 flex items-center justify-center text-2xl no-results">
+          <p>No Results Found</p>
         </div>
       )}
 
-      {
-        searchValue && (
-          <div className="flex flex-wrap pb-[12px] px-[--px]">
-      {productSliderData.map((data, index) => (
-        <ProductCard
-          key={index}
-          arrayData={data}
-          contCn={"w-1/5 mt-[14px] md:mt-[19px]"}
-          buttonStyle={{ display: "none" }}
-        />
-      ))}
+      {searchValue && (
+        <div className="flex flex-wrap border border-red-600 pb-[12px] px-[--px]">
+          {productSliderData.map((data, index) => (
+            <ProductCard
+              key={index}
+              arrayData={data}
+              contCn={"w-1/5 mt-[14px] md:mt-[19px]"}
+              buttonStyle={{ display: "none" }}
+            />
+          ))}
 
-      {productListData.map((category, categoryIndex) =>
-        category.products.map((product, productIndex) => (
-          <ProductCard
-            key={productIndex}
-            arrayData={product}
-            contCn={"w-1/5 mt-[14px] md:mt-[19px]"}
-            buttonStyle={{ display: "none" }}
-          />
-        ))
+          {productListData.map((category, categoryIndex) =>
+            category.products.map((product, productIndex) => (
+              <ProductCard
+                key={productIndex}
+                arrayData={product}
+                contCn={"w-1/5 mt-[14px] md:mt-[19px]"}
+                buttonStyle={{ display: "none" }}
+              />
+            ))
+          )}
+        </div>
       )}
-    </div>
-        )
-      }
     </>
   );
 };
