@@ -86,7 +86,7 @@ const NavbarMobile = () => {
         <span
           id="pseudo-element"
           onClick={mainMenuToggle}
-          className={`bg-black bg-opacity-25 absolute top-0 right-0 w-full h-full z-[-1] transition-all ease-linear duration-150 ${
+          className={`bg-black bg-opacity-25 fixed top-0 right-0 w-full h-full z-[-1] transition-all ease-linear duration-150 ${
             !mainMenuVisibility && "opacity-0"
           }`}
         />
