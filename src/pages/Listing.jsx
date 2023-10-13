@@ -6,6 +6,10 @@ import zipImg from "../assets/zip.svg";
 import { Link } from "react-router-dom";
 import ProductList from "../components/productSlider/ProductList";
 import { productListData } from "../data/listingPage/productListData";
+import { sponsorsLogoData } from "../data/listingPage/sponsorsLogoData";
+import ListingSponsorImg from "../components/listingSponsorImg/ListingSponsorImg";
+import LisitingFollowPost from "../components/listingFollowPost/LisitingFollowPost";
+import { lisitingFollowPost } from "../data/listingPage/lisitingFollowPost";
 
 const Listing = () => {
   return (
@@ -44,10 +48,38 @@ const Listing = () => {
 
         <div
           id="product-list-1"
-          className="template mt-[14px] mb-10 lg:px-[--px] 1400:px-0"
+          className="template flex flex-col gap-3 mt-[14px] lg:px-[--px] 1400:px-0"
         >
-         
-            <ProductList key={0} arrayData={productListData} />
+          {productListData.map((data, index) => (
+            <ProductList key={index} arrayData={data} />
+          ))}
+        </div>
+      </div>
+
+      <div
+        id="sponsors"
+        className="template mt-[31px] px-[--px] flex flex-wrap justify-center 400:justify-between 500:px-0 gap-1 md:justify-center "
+      >
+        {sponsorsLogoData.map((data, index) => (
+          <ListingSponsorImg key={index} arrayData={data} />
+        ))}
+      </div>
+
+      <div
+        id="follow-us"
+        className="template px-[--px] my-10 hidden mt-[42px] flex-col flex-wrap lg:flex 1400:px-0"
+      >
+        <h1 className="text-[22px] font-semibold leading-tight">
+          Follow us on Instagram for News, Offers & More
+        </h1>
+
+        <div
+          id="follow-us-posts"
+          className="flex flex-wrap 1300:gap-[4px]"
+        >
+          {lisitingFollowPost.map((data, index) => (
+            <LisitingFollowPost key={index} arrayData={data} />
+          ))}
         </div>
       </div>
     </div>
