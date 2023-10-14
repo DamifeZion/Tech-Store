@@ -8,11 +8,12 @@ import { useSelector } from "react-redux";
 const SearchResult = () => {
   useIsSearching();
   const { searchValue } = useSelector((state) => state.desktopNavSlice);
-
+  
+  
   return (
     <>
       {!searchValue && (
-        <div className="w-full h-64 flex items-center justify-center text-2xl no-results">
+        <div className="w-full h-64 flex items-center justify-center lg:text-[1.5rem] md:text-[2rem]">
           <p>No Results Found</p>
         </div>
       )}
@@ -23,7 +24,7 @@ const SearchResult = () => {
             <ProductCard
               key={index}
               arrayData={data}
-              contCn={"w-1/5 mt-[14px] md:mt-[19px]"}
+              contCn={"w-[200px] mt-[14px] md:mt-[19px] lg:w-1/5"}
               buttonStyle={{ display: "none" }}
             />
           ))}
@@ -33,7 +34,7 @@ const SearchResult = () => {
               <ProductCard
                 key={productIndex}
                 arrayData={product}
-                contCn={"w-1/5 mt-[14px] md:mt-[19px]"}
+                contCn={"w-[200px] mt-[14px] md:mt-[19px] lg:w-1/5"}
                 buttonStyle={{ display: "none" }}
               />
             ))
