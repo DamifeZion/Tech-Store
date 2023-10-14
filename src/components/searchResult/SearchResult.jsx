@@ -24,7 +24,7 @@ const SearchResult = () => {
             <ProductCard
               key={index}
               arrayData={data}
-              contCn={"w-[200px] mt-[14px] md:mt-[19px] lg:w-1/5"}
+              contCn={"mt-[14px] md:mt-[19px] lg:w-1/5"}
               buttonStyle={{ display: "none" }}
             />
           ))}
@@ -34,7 +34,7 @@ const SearchResult = () => {
               <ProductCard
                 key={productIndex}
                 arrayData={product}
-                contCn={"w-[200px] mt-[14px] md:mt-[19px] lg:w-1/5"}
+                contCn={"mt-[14px] md:mt-[19px] lg:w-1/5"}
                 buttonStyle={{ display: "none" }}
               />
             ))
