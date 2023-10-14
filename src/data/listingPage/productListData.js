@@ -17,7 +17,7 @@ import dsk1 from "../../assets/desktopImg1.png";
 import dsk2 from "../../assets/desktopImg2.png";
 import dsk3 from "../../assets/desktopImg3.png";
 
-// Desktops
+// Gaming Monitors
 import gamingMonitors from "../../assets/gamingMonitors.png";
 import gm1 from "../../assets/gamingMonitor1.png";
 import gm2 from "../../assets/gamingMonitor2.png";
